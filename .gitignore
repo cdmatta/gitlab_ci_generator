@@ -1,0 +1,12 @@
+.venv/
+**/__pycache__/
+
+# pytest
+pytest.log
+.pytest_cache/
+report/
+.coverage
+htmlcov/
+
+## distribution packages
+dist/
