@@ -42,6 +42,15 @@ def clean(context):
     subprocess.run(" ".join(cmd), shell=True, check=False)
 
 
+@task(pre=[clean])
+def tests(context):
+    cmd = [
+        "pytest",
+        f"{ROOT}/tests",
+    ]
+    subprocess.run(" ".join(cmd), shell=True, check=True)
+
+
 @task
 def local_env_main(context):
     write_dict_to_env_file()
