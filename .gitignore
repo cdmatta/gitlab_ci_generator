@@ -10,3 +10,6 @@ htmlcov/
 
 ## distribution packages
 dist/
+
+## local testing
+.env
