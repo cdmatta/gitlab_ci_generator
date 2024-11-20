@@ -5,10 +5,11 @@
         },
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
+    "debug.inlineValues": "on",
     "editor.renderControlCharacters": true,
     "files.exclude": {
-        ".pytest_cache": true,
-        "**/__pycache__": true
+        "**/__pycache__": true,
+        ".pytest_cache": true
     },
     "isort.args": [
         "--profile",

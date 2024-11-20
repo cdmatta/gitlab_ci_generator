@@ -27,8 +27,12 @@ def clean(context):
 
 
 @task
-def gen(context):
+def gen(context, verbose=False, color=False):
     cmd = [
         "gitlab_ci_generator",
+        "-f",
+        f"{ROOT}/config.yml",
+        "-v" if verbose else "",
+        "-c" if color else "",
     ]
     context.run(" ".join(cmd), pty=True)
